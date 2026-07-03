@@ -27,9 +27,18 @@
   --radius-sm:10px;
 }
 
-/* ============ Base ============ */
-*{ box-sizing:border-box; }
-html{ scroll-behavior:smooth; }
+*,
+*::before,
+*::after { box-sizing: border-box !important; }
+ 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
+}html, body{
+  max-width:100%;
+  overflow-x:hidden;
+}
+* { max-width: 100%; }
 body{
   font-family:var(--font-body);
   color:var(--ink);
